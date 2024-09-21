@@ -117,6 +117,9 @@
         <img src="foto 3.jpg" alt="Un día inolvidable" onclick="openModal(this.src)">
     </div>
 
+    <h2>Contador de Días Juntos</h2>
+    <div id="contador" style="font-size: 2rem; color: #fdd835;"></div>
+
     <h2>Déjame un mensaje</h2>
     <form action="https://formspree.io/f/mvgpjalv" method="POST">
         <input type="text" name="nombre" placeholder="Tu nombre" required>
@@ -143,6 +146,13 @@
     function closeModal() {
         document.getElementById('modal').style.display = 'none';
     }
+
+    // Contador de días juntos
+    const fechaInicio = new Date('2016-05-26'); // Cambia esta fecha según sea necesario
+    const fechaActual = new Date();
+    const diferencia = fechaActual - fechaInicio;
+    const diasJuntos = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    document.getElementById('contador').innerText = `¡Han pasado ${diasJuntos} días juntos!`;
     </script>
 </body>
 </html>
