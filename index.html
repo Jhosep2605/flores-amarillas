@@ -12,7 +12,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            color: #333;
+            color: #000; /* Texto negro */
             text-align: center;
             padding: 2rem;
         }
@@ -26,9 +26,11 @@
         }
         .photos {
             margin-top: 2rem;
-            background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+            background-color: rgba(255, 255, 255, 1); /* Fondo blanco opaco */
             padding: 1rem;
             border-radius: 10px;
+            position: relative; /* Para usar z-index */
+            z-index: 1; /* Asegura que las fotos estén en la parte superior */
         }
         .photos img {
             width: 200px;
@@ -60,4 +62,5 @@
     <footer>&copy; 26/05/2016 J y M <3</footer>
 </body>
 </html>
+
 
